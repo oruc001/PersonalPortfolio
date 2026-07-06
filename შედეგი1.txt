@@ -1,0 +1,62 @@
+zzz@zzz-MCB:~$ git config --global user.name "oruc001"
+zzz@zzz-MCB:~$ git config --global user.email "oruc001@gmail.com"
+zzz@zzz-MCB:~$ git config --global --list
+user.email=oruc001@gmail.com
+user.name=oruc001
+zzz@zzz-MCB:~$ mkdir PersonalPortfolio
+zzz@zzz-MCB:~$ cd PersonalPortfolio/
+zzz@zzz-MCB:~/PersonalPortfolio$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/zzz/PersonalPortfolio/.git/
+zzz@zzz-MCB:~/PersonalPortfolio$ git config --global init.defaultBranch main
+zzz@zzz-MCB:~/PersonalPortfolio$ touch index.html style.css README.md
+zzz@zzz-MCB:~/PersonalPortfolio$ git add .
+zzz@zzz-MCB:~/PersonalPortfolio$ git commit -m "პირველი კომიტი"
+[master (root-commit) 3de8c12] პირველი კომიტი
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+ create mode 100644 index.html
+ create mode 100644 style.css
+zzz@zzz-MCB:~/PersonalPortfolio$ git log
+commit 3de8c125c9eb75f332f4cf9c928faeded0aab552 (HEAD -> master)
+Author: oruc001 <oruc001@gmail.com>
+Date:   Mon Jul 6 12:38:30 2026 +0400
+
+    პირველი კომიტი
+zzz@zzz-MCB:~/PersonalPortfolio$ git remote add origin https://github.com/oruc001/PersonalPortfolio.git
+zzz@zzz-MCB:~/PersonalPortfolio$ git branch -M main
+zzz@zzz-MCB:~/PersonalPortfolio$ git push -u origin main
+Username for 'https://github.com': oruc001Password for 'https://oruc001@github.com': Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.Delta compression using up to 4 threadsCompressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 261 bytes | 261.00 KiB/s, done.Total 3 (delta 0), reused 0 (delta 0), pack-reused 0To https://github.com/oruc001/PersonalPortfolio.git * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.zzz@zzz-MCB:~/PersonalPortfolio$ git checkout -b feature/homepage
+Switched to a new branch 'feature/homepage'
+zzz@zzz-MCB:~/PersonalPortfolio$ git add .
+zzz@zzz-MCB:~/PersonalPortfolio$ git commit -m "index.html დავაედითე"
+[feature/homepage d4891bc] index.html დავაედითე
+ 1 file changed, 11 insertions(+)
+zzz@zzz-MCB:~/PersonalPortfolio$ git push origin feature/homepage
+Username for 'https://github.com': oruc001 
+Password for 'https://oruc001@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 473 bytes | 473.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'feature/homepage' on GitHub by visiting:
+remote:      https://github.com/oruc001/PersonalPortfolio/pull/new/feature/homepage
+remote: 
+To https://github.com/oruc001/PersonalPortfolio.git
+ * [new branch]      feature/homepage -> feature/homepage
+zzz@zzz-MCB:~/PersonalPortfolio$ 
